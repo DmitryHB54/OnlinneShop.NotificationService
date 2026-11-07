@@ -1,4 +1,4 @@
-﻿namespace OnlineShop.NotificationService.WebApi.Contracts;
+﻿namespace OnlineShop.Shared.Contracts;
 
 public record UserRegistered(
     Guid UserId,

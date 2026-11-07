@@ -3,6 +3,7 @@ using OnlineShop.NotificationService.WebApi.Consumers;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Logging.AddFilter("MassTransit", LogLevel.Debug);
 builder.Services.AddMassTransit(x =>
 {
     x.AddConsumer<UserRegisteredConsumer>();

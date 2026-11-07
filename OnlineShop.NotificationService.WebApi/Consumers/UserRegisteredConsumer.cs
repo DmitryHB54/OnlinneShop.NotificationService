@@ -1,5 +1,5 @@
 ﻿using MassTransit;
-using OnlineShop.NotificationService.WebApi.Contracts;
+using OnlineShop.Shared.Contracts;
 
 namespace OnlineShop.NotificationService.WebApi.Consumers;
 
@@ -16,7 +16,7 @@ public class UserRegisteredConsumer : IConsumer<UserRegistered>
     {
         UserRegistered message = context.Message;
 
-        _logger.LogInformation(new string('=', 40));
+        _logger.LogInformation("========================================");
         _logger.LogInformation("EMAIL SENT to {Email}", message.Email);
         _logger.LogInformation("Hello, {FirstName}! Welcome to OnlineShop!", message.FirstName);
         _logger.LogInformation("User ID: {UserId}, Registered at: {RegisteredAt}", message.UserId, message.RegisteredAt);
